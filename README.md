@@ -29,7 +29,6 @@ A secure, full-featured URL shortener backend built with Node.js, Express, MySQL
 
 ### 1. Clone the project
 
-```bash
 - git clone https://github.com/yourusername/LinkShortener-backend.git
 - cd LinkShortener-backend
 
