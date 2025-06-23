@@ -1,6 +1,6 @@
 # 🔗 LinkShortener Backend API
 
-A secure, full-featured URL shortener backend built with **Node.js**, **Express**, **MySQL**, and **JWT** authentication.
+A secure, full-featured URL shortener backend built with Node.js, Express, MySQL, and JWT authentication.
 
 ---
 
@@ -17,11 +17,11 @@ A secure, full-featured URL shortener backend built with **Node.js**, **Express*
 
 ## 🛠️ Tech Stack
 
-- **Backend**: Node.js + Express
-- **Database**: MySQL
-- **Auth**: JWT
-- **CSV Export**: `fast-csv`
-- **Short Code**: `nanoid`
+- Backend: Node.js + Express
+- Database: MySQL
+- Auth: JWT
+- CSV Export: `fast-csv`
+- Short Code: `nanoid`
 
 ---
 
@@ -33,11 +33,15 @@ A secure, full-featured URL shortener backend built with **Node.js**, **Express*
 - git clone https://github.com/yourusername/LinkShortener-backend.git
 - cd LinkShortener-backend
 
-**### 2. Install dependencies**
+---
+
+### 2. Install dependencies
 
 - npm install
 
-**### 3. Create .env file**
+---
+
+### 3. Create .env file
 
 - PORT=5000
 - DB_HOST=localhost
@@ -46,7 +50,9 @@ A secure, full-featured URL shortener backend built with **Node.js**, **Express*
 - DB_NAME=linkshortener
 - JWT_SECRET=your_jwt_secret
 
-**### 4. MySQL Schema**
+---
+
+### 4. MySQL Schema
 
 CREATE TABLE users (
   id INT PRIMARY KEY AUTO_INCREMENT,
@@ -67,6 +73,8 @@ CREATE TABLE urls (
   FOREIGN KEY (user_id) REFERENCES users(id)
 );
 
+---
+
 ## 🧪 API Endpoints
 
 ### 🔐 Auth
@@ -76,6 +84,8 @@ CREATE TABLE urls (
 | POST   | `/api/auth/register` | Register user |
 | POST   | `/api/auth/login`    | Login user    |
 
+---
+
 ### ✂️ Shortener (User)
 | Method | Endpoint           | Description          |
 | ------ | ------------------ | -------------------- |
@@ -83,6 +93,8 @@ CREATE TABLE urls (
 | GET    | `/u/:code`         | Redirect to original |
 | GET    | `/my-links`        | Paginated links      |
 | GET    | `/my-links/export` | CSV export of links  |
+
+---
 
 ###🛡 Admin
 
@@ -94,25 +106,33 @@ CREATE TABLE urls (
 
 ⚠️ All routes require Authorization: Bearer <JWT> header.
 
-**### ⚙️ Scripts**
+---
+
+### ⚙️ Scripts
 
 npm run dev   # Run in dev mode with nodemon
 npm start     # Run in production
 
-**### 🧰 Dev Tools**
+---
+
+### 🧰 Dev Tools
 
 nanoid for short code generation
 fast-csv for exporting CSVs
 dotenv for environment configs
 
-**### 🛡 User Roles
-**
+---
+
+### 🛡 User Roles
+
 | Role  | Type | Description     |
 | ----- | ---- | --------------- |
 | Admin | 2    | Full access     |
 | User  | 1    | Access own data |
 
-**### 🧾 Sample JWT Payload**
+---
+
+### 🧾 Sample JWT Payload
 
 {
   "id": 1,
@@ -120,11 +140,17 @@ dotenv for environment configs
   "type": 2
 }
 
-**## ✍️ Author**
+---
+
+## ✍️ Author
 
 Developed by Piyush
 📧 Contact: piyushh.dev@gmail.com
 
-**## 📃 License**
+---
+
+## 📃 License
 
 MIT License
+
+---
